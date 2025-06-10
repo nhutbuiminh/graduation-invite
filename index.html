@@ -16,6 +16,17 @@
     .headline {
       font-family: 'Great Vibes', cursive;
     }
+    .bounce {
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
   </style>
 </head>
 <body class="text-gray-800">
@@ -26,7 +37,7 @@
   <!-- Trang 1: Landing như ảnh mẫu -->
   <section id="landing" class="min-h-screen flex flex-col md:flex-row items-center justify-center bg-orange-50 p-8">
     <!-- Bên trái -->
-    <div class="w-full md:w-1/2 text-left space-y-6">
+    <div class="w-full md:w-1/2 text-left space-y-6 md:pr-4">
       <h1 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
         Congratulations <br><span class="text-orange-600">Phạm Lê Linh Đan</span>
       </h1>
@@ -39,16 +50,38 @@
 
     <!-- Bên phải -->
     <div class="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
-      <img src="z6692435369778_c37dda87db17c0edf6baf6fd89c0ae69.jpg" alt="Graduation" class="rounded-lg shadow-lg max-w-full h-auto">
+      <img src="images/linhdan-graduation.jpg" alt="Graduation" class="rounded-lg shadow-lg max-w-full h-auto">
     </div>
   </section>
 
-  <!-- Trang 2: Chi tiết và đếm ngược -->
-  <section id="details" class="min-h-screen flex flex-col items-center justify-center bg-purple-100 text-center px-4">
-    <h2 class="text-4xl font-bold mb-4">Thông tin buổi lễ</h2>
-    <p class="text-xl mb-2">🗓️ 9h30 ngày 18 tháng 6 năm 2025</p>
-    <p class="text-xl mb-4">📍 Địa điểm: [Điền địa điểm tại đây]</p>
-    <div id="countdown" class="text-3xl text-purple-700 font-bold"></div>
+  <!-- Trang 2: Thiệp mời như ảnh mới -->
+  <section id="details" class="min-h-screen flex flex-col items-center justify-center bg-green-700 text-white text-center px-4 py-12">
+    <h2 class="text-2xl font-semibold mb-6 tracking-wide">Without reducing respect</h2>
+    <p class="mb-10 text-lg max-w-xl">
+      Accompanied by prayers, we hope that you are always in good health and
+      successful in carrying out your daily activities. We intend to invite you to
+      the Graduation Ceremony
+    </p>
+    <div class="flex items-center justify-center text-4xl font-bold mb-6">
+      <div class="text-lg mr-4">MONDAY</div>
+      <div class="border-l border-white h-12 mx-4"></div>
+      <div class="text-6xl">12</div>
+      <div class="border-l border-white h-12 mx-4"></div>
+      <div class="text-lg ml-4">DECEMBER</div>
+    </div>
+    <div class="text-xl mb-8">202X</div>
+    <div class="text-lg font-semibold">METTA SCHOOL HALL</div>
+    <div class="text-base mb-4">Lorem Ipsum Street No.21</div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Đại+học+Duy+Tân,+03+Quang+Trung,+Đà+Nẵng" target="_blank"
+   class="mt-4 inline-block bounce">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white hover:text-yellow-300 transition duration-300" fill="none"
+       viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 11c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z" />
+    <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 21c-4.418 0-8-6.268-8-10a8 8 0 0116 0c0 3.732-3.582 10-8 10z" />
+  </svg>
+</a>
   </section>
 
   <!-- Trang 3: Xác nhận tham dự -->
@@ -72,7 +105,6 @@
   </section>
 
   <script>
-    // Countdown timer
     const countdown = document.getElementById("countdown");
     const targetDate = new Date("2025-06-18T09:30:00").getTime();
 
@@ -87,9 +119,8 @@
       countdown.innerText = `Còn ${days} ngày nữa`; 
     };
     updateCountdown();
-    setInterval(updateCountdown, 86400000); // Cập nhật mỗi ngày
+    setInterval(updateCountdown, 86400000);
 
-    // GSAP animations
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.from("#landing .text-left", {
