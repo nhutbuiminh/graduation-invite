@@ -4,34 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thư Mời Lễ Tốt Nghiệp - Phạm Lê Linh Đan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Inter', sans-serif;
+    }
+    .headline {
+      font-family: 'Great Vibes', cursive;
+    }
+    .bg-glass {
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <div class="max-w-xl mx-auto p-6 mt-12 bg-white shadow-lg rounded-xl">
-    <h1 class="text-3xl font-bold text-center text-purple-700 mb-4">🎓 Thư Mời Dự Lễ Tốt Nghiệp 🎓</h1>
-    <p class="mb-4">Chào bạn,</p>
-    <p class="mb-4">Mình là <strong>Phạm Lê Linh Đan</strong>, và mình rất vui mừng thông báo rằng mình sẽ chính thức tốt nghiệp!</p>
-    <p class="mb-4">🎉 Mình xin trân trọng mời bạn đến tham dự buổi lễ tốt nghiệp cùng mình:</p>
-    <ul class="mb-4 list-disc list-inside">
-      <li><strong>🗓️ Thời gian:</strong> 9h30 ngày 18 tháng 6 năm 2025</li>
-      <li><strong>📍 Địa điểm:</strong> [Điền địa điểm tại đây]</li>
-    </ul>
-    <p class="mb-6">👉 Vui lòng điền tên bạn và xác nhận có thể tham dự không nhé!</p>
+<body class="text-gray-800">
+  <div class="min-h-screen flex items-center justify-center px-4">
+    <div class="max-w-2xl w-full p-8 rounded-2xl shadow-xl bg-glass">
+      <h1 class="text-5xl headline text-center text-purple-700 mb-6">Thư Mời Dự Lễ Tốt Nghiệp</h1>
+      <p class="text-lg mb-4">Chào bạn,</p>
+      <p class="text-lg mb-4">Mình là <strong>Phạm Lê Linh Đan</strong>, và mình rất vui mừng thông báo rằng mình sẽ chính thức tốt nghiệp! 🎓</p>
+      <p class="text-lg mb-4">Mình xin trân trọng mời bạn đến tham dự buổi lễ tốt nghiệp cùng mình:</p>
+      <ul class="mb-6 text-lg list-disc list-inside">
+        <li><strong>🗓️ Thời gian:</strong> 9h30 ngày 18 tháng 6 năm 2025</li>
+        <li><strong>📍 Địa điểm:</strong> [Điền địa điểm tại đây]</li>
+      </ul>
+      <p class="text-lg mb-6">Vui lòng xác nhận tham dự bằng cách điền thông tin bên dưới nhé 💌</p>
 
-    <form action="mailto:phamlelinhdan@example.com" method="POST" enctype="text/plain" class="space-y-4">
-      <div>
-        <label for="name" class="block mb-1 font-semibold">Tên của bạn</label>
-        <input type="text" id="name" name="Tên khách mời" required class="w-full border border-gray-300 p-2 rounded" placeholder="Nguyễn Văn A">
-      </div>
-      <div>
-        <label class="block mb-1 font-semibold">Bạn có thể tham dự không?</label>
-        <select name="Tham dự" required class="w-full border border-gray-300 p-2 rounded">
-          <option value="Có thể tham dự">✅ Có thể tham dự</option>
-          <option value="Không thể tham dự">❌ Không thể tham dự</option>
-        </select>
-      </div>
-      <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Gửi phản hồi</button>
-    </form>
+      <form action="mailto:phamlelinhdan@example.com" method="POST" enctype="text/plain" class="space-y-4">
+        <div>
+          <label for="name" class="block mb-1 font-semibold">Tên của bạn</label>
+          <input type="text" id="name" name="Tên khách mời" required class="w-full border border-gray-300 p-2 rounded shadow-sm" placeholder="Nguyễn Văn A">
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold">Bạn có thể tham dự không?</label>
+          <select name="Tham dự" required class="w-full border border-gray-300 p-2 rounded shadow-sm">
+            <option value="Có thể tham dự">✅ Có thể tham dự</option>
+            <option value="Không thể tham dự">❌ Không thể tham dự</option>
+          </select>
+        </div>
+        <div class="text-center pt-4">
+          <button type="submit" class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition">Gửi phản hồi</button>
+        </div>
+      </form>
+    </div>
   </div>
 </body>
 </html>
