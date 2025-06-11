@@ -88,7 +88,7 @@
    <section id="rsvp" class="min-h-screen flex items-center justify-center bg-white px-4">
     <div class="max-w-xl w-full text-center">
       <h3 class="text-3xl font-bold mb-6">Bạn sẽ đến chứ? 💌</h3>
-      <form action="https://formspree.io/f/xzzgrzjj" method="POST" class="bg-purple-50 p-6 rounded-xl shadow-xl space-y-6 text-left">
+<!--       <form action="https://formspree.io/f/xzzgrzjj" method="POST" class="bg-purple-50 p-6 rounded-xl shadow-xl space-y-6 text-left">
   <label class="block">
     <span class="block text-lg font-medium text-purple-800 mb-1">Tên của bạn</span>
     <input type="text" name="Tên khách mời" required placeholder="Nhập tên..."
@@ -111,6 +111,15 @@
       Gửi phản hồi
     </button>
   </div>
+</form> -->
+      <form action="https://formspree.io/f/moqprjgj" method="POST">
+  <input type="text" name="Tên khách mời" placeholder="Tên của bạn" required>
+  <select name="Tham dự" required>
+    <option value="">-- Chọn --</option>
+    <option value="Có thể tham dự">Có thể tham dự</option>
+    <option value="Không thể tham dự">Không thể tham dự</option>
+  </select>
+  <button type="submit">Gửi</button>
 </form>
     </div>
   </section>
