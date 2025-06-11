@@ -112,20 +112,20 @@
     </button>
   </div>
 </form> -->
-<form action="https://formspree.io/f/xzzgrzjj" method="POST" class="space-y-6">
+<form
+  action="https://formspree.io/f/xzzgrzjj"
+  method="POST"
+  enctype="multipart/form-data"
+>
   <label>
-    <span>Tên của bạn:</span>
-    <input type="text" name="Tên khách mời" required placeholder="Ví dụ: Nguyễn Văn A">
+    Your email:
+    <input type="email" name="email">
   </label>
   <label>
-    <span>Bạn có thể tham dự không?</span>
-    <select name="Tham dự" required>
-      <option value="">-- Chọn --</option>
-      <option value="Có thể tham dự">✅ Có thể tham dự</option>
-      <option value="Không thể tham dự">❌ Không thể tham dự</option>
-    </select>
+    Your file:
+    <input type="file" name="upload">
   </label>
-  <button type="submit" class="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700">Gửi phản hồi</button>
+  <button type="submit">Send</button>
 </form>
 
     </div>
