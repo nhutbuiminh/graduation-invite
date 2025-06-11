@@ -59,7 +59,7 @@
     <h2 class="text-2xl font-semibold mb-6 tracking-wide">Mình tốt nghiệp rồi <3</h2>
     <p class="mb-10 text-lg max-w-xl">
       Chuyến xe hành trình 4 năm của mình đã đến trạm cuối, cùng sự đồng hành của Gia Đình, bạn bè, những người yêu thương mình. 
-      Cảm ơn tất cả mọi người đã luôn dành tình yêu thương.
+      Cảm ơn tất cả mọi người đã luôn dành tình yêu thương cho mình.
       Vào ngày đặc biệt như hôm nay, hy vọng mọi người sẽ bỏ chút thời gian đến chung vui cùng mình.
       Sự có mặt của mọi người là niềm vinh dự đối với mình.
     </p>
@@ -100,7 +100,7 @@
     <span class="block text-lg font-medium text-purple-800 mb-1">Bạn có thể tham dự không?</span>
     <select name="Tham dự" required
       class="w-full px-4 py-3 rounded-md border border-purple-300 focus:ring-2 focus:ring-purple-400 focus:outline-none">
-      <option value="">-- Chọn một tùy chọn --</option>
+      <option value="">Chọn thì chọn không chọn thì chọn /option>
       <option value="Có thể tham dự">✅ Có thể tham dự</option>
       <option value="Không thể tham dự">❌ Không thể tham dự</option>
     </select>
@@ -136,18 +136,28 @@
 
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from("#landing .text-left", {
-      opacity: 0,
-      x: -50,
-      duration: 1.2
-    });
+gsap.from("#landing .text-left", {
+  scrollTrigger: {
+    trigger: "#landing .text-left",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  },
+  opacity: 0,
+  x: -50,
+  duration: 1.2
+});
 
-    gsap.from("#landing img", {
-      opacity: 0,
-      x: 50,
-      duration: 1.2,
-      delay: 0.3
-    });
+gsap.from("#landing img", {
+  scrollTrigger: {
+    trigger: "#landing img",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  },
+  opacity: 0,
+  x: 50,
+  duration: 1.2,
+  delay: 0.3
+});
 
     gsap.from("#details", {
       scrollTrigger: {
