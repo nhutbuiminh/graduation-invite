@@ -85,36 +85,35 @@
   </section>
 
   <!-- Trang 3: Xác nhận tham dự -->
-   <section id="rsvp" class="min-h-screen flex items-center justify-center bg-white px-4">
-    <div class="max-w-xl w-full text-center">
-      <h3 class="text-3xl font-bold mb-6">Bạn sẽ đến chứ?</h3>
-      <form action="https://formspree.io/f/xzzgrzjj" method="POST" class="bg-purple-50 p-6 rounded-xl shadow-xl space-y-6">
-  <label class="block">
-    <span class="block text-lg font-medium text-purple-800 mb-1">Tên của bạn</span>
-    <input type="text" name="message" required placeholder="Nhập tên..."
-      class="w-full px-4 py-3 rounded-md border border-purple-300 focus:ring-2 focus:ring-purple-400 focus:outline-none">
-  </label>
+  <section id="rsvp" class="min-h-screen flex items-center justify-center bg-white px-4">
+  <div class="w-full max-w-xl">
+    <h3 class="text-3xl font-bold text-center mb-6">Bạn sẽ đến chứ?</h3>
+    <form action="https://formspree.io/f/xzzgrzjj" method="POST" class="mx-auto bg-purple-50 p-6 rounded-xl shadow-xl space-y-6 max-w-md">
+      <label class="block">
+        <span class="block text-lg font-medium text-purple-800 mb-1">Tên của bạn</span>
+        <input type="text" name="message" required placeholder="Nhập tên..."
+          class="w-full px-4 py-3 rounded-md border border-purple-300 focus:ring-2 focus:ring-purple-400 focus:outline-none">
+      </label>
 
-  <label class="block">
-    <span class="block text-lg font-medium text-purple-800 mb-1">Bạn có thể tham dự không?</span>
-    <select name="Tham dự" required
-      class="w-full px-4 py-3 rounded-md border border-purple-300 focus:ring-2 focus:ring-purple-400 focus:outline-none">
-      <option value="">Chọn thì chọn không chọn thì chọn </option>
-      <option value="Có thể tham dự">✅ Có thể tham dự</option>
-      <option value="Không thể tham dự">❌ Không thể tham dự</option>
-    </select>
-  </label>
+      <label class="block">
+        <span class="block text-lg font-medium text-purple-800 mb-1">Bạn có thể tham dự không?</span>
+        <select name="Tham dự" required
+          class="w-full px-4 py-3 rounded-md border border-purple-300 focus:ring-2 focus:ring-purple-400 focus:outline-none">
+          <option value="">Chọn thì chọn không chọn thì chọn</option>
+          <option value="Có thể tham dự">✅ Có thể tham dự</option>
+          <option value="Không thể tham dự">❌ Không thể tham dự</option>
+        </select>
+      </label>
 
-  <div class="text-center pt-2">
-    <button type="submit"
-      class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg rounded-full shadow-md transition duration-300">
-      Gửi phản hồi
-    </button>
+      <div class="text-center pt-2">
+        <button type="submit"
+          class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg rounded-full shadow-md transition duration-300">
+          Gửi phản hồi
+        </button>
+      </div>
+    </form>
   </div>
-</form>
-    </div>
-  </section>
-
+</section>
 
   <script>
     const countdown = document.getElementById("countdown");
